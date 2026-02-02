@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* BOTNOI ACADEMY Design System */
+
+@layer base {
+  :root {
+    /* Primary Colors */
+    --soft-pink: 331 82% 87%; /* #F8C2DC - Baby Pink */
+    --soft-pink-dark: 331 70% 75%;
+    --sky-blue: 211 100% 70%; /* #66B1FF - Sky Blue */
+    --sky-blue-dark: 211 90% 60%;
+    --navy: 225 43% 31%; /* #2D3E72 - Deep Ocean Blue */
+    --navy-light: 225 35% 45%;
+    
+    /* Extended Palette */
+    --soft-azure: 266 100% 83%; /* #CEA9FF */
+    --orange-red: 13 100% 70%; /* #FF8866 */
+    --darker-pink: 329 55% 65%; /* #D478A6 */
+    
+    /* Service Card Accents */
+    --teal: 195 100% 60%; /* #33CCFF */
+    --teal-foreground: 0 0% 100%;
+    --yellow: 45 93% 58%;
+    --yellow-foreground: 0 0% 10%;
+    --green: 142 62% 47%;
+    --green-foreground: 0 0% 100%;
+    
+    /* Base tokens */
+    --background: 0 0% 100%;
+    --foreground: 225 43% 31%; /* Match Navy */
+
+    --card: 0 0% 100%;
+    --card-foreground: 225 43% 31%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 225 43% 31%;
+
+    --primary: 225 43% 31%; /* Match Navy */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 331 82% 87%; /* Match Soft Pink */
+    --secondary-foreground: 225 43% 31%;
+
+    --muted: 211 100% 70%; /* Match Sky Blue */
+    --muted-foreground: 225 40% 40%;
+
+    --accent: 331 82% 87%;
+    --accent-foreground: 225 43% 31%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 225 20% 90%;
+    --input: 225 20% 90%;
+    --ring: 225 43% 31%;
+
+    --radius: 1.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 240 76% 10%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 76% 15%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 76% 15%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 350 100% 94%;
+    --primary-foreground: 240 76% 29%;
+
+    --secondary: 240 60% 25%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 60% 20%;
+    --muted-foreground: 240 20% 70%;
+
+    --accent: 240 60% 25%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 40% 25%;
+    --input: 240 40% 25%;
+    --ring: 350 100% 94%;
+    
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Kanit', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  html, body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@layer utilities {
+  .gradient-cta {
+    background: linear-gradient(135deg, hsl(var(--soft-pink)) 0%, hsl(var(--sky-blue)) 100%);
+  }
+  
+  .shadow-soft {
+    box-shadow: 0 10px 40px -10px rgba(26, 35, 126, 0.15);
+  }
+  
+  .shadow-card {
+    box-shadow: 0 4px 20px -5px rgba(26, 35, 126, 0.1);
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-float-delayed {
+    animation: float 6s ease-in-out infinite;
+    animation-delay: 2s;
+  }
+  
+  .animate-float-slow {
+    animation: float 8s ease-in-out infinite;
+    animation-delay: 1s;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
