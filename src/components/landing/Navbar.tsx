@@ -8,7 +8,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "Internship", href: "/internship" },
-  { label: "Review", href: "/#experience" },
+  { label: "Review", href: "/reviews" },
   { label: "Contact", href: "/#contact" },
 ];
 
@@ -20,7 +20,7 @@ export const Navbar = () => {
   const accentMap: Record<string, string> = {
     "/": "linear-gradient(135deg, hsl(var(--soft-pink)/0.85), hsl(var(--sky-blue)/0.85))",
     "/internship": "linear-gradient(135deg, hsl(var(--sky-blue)/0.85), hsl(var(--soft-azure)/0.85))",
-    "/#experience": "linear-gradient(135deg, hsl(var(--soft-azure)/0.85), hsl(var(--soft-pink)/0.85))",
+    "/reviews": "linear-gradient(135deg, hsl(var(--soft-azure)/0.85), hsl(var(--soft-pink)/0.85))",
     "/#contact": "linear-gradient(135deg, hsl(var(--soft-pink)/0.85), hsl(var(--orange-red)/0.85))",
   };
 

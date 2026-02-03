@@ -21,7 +21,7 @@ interface PositionDetail {
   requirements: string[];
 }
 
-const INTERNSHIP_POSITIONS: PositionDetail[] = [
+export const INTERNSHIP_POSITIONS: PositionDetail[] = [
   {
     title: "AI Researcher & Development",
     scope: [
